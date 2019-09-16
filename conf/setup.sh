@@ -12,3 +12,11 @@ sudo yum install -y jenkins
 sudo service jenkins start
 
 sudo chkconfig --add jenkins
+
+echo "Install Ansible"
+cd /tmp
+sudo wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo rpm -ivh epel-release-latest-7.noarch.rpm
+sudo yum-config-manager --enable epel
+yum -y install ansible
+
