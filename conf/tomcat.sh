@@ -9,5 +9,5 @@ sudo rm apache-tomcat-7.0.53.tar.gz
 sleep 25
 echo "starting tomcat process"
 cd /opt/apache-tomcat-7.0.53/bin/
-sudo sh startup.sh &
+sudo sh startup.sh
 echo "tomcat started"
