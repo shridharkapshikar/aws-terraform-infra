@@ -22,6 +22,10 @@ resource "aws_instance" "infra" {
              "sudo sh /tmp/setup.sh"
         ]
     }
+     provisioner "file" {
+        source = "conf/basic-security.groovy"
+        destination = "/tmp/basic-security.groovy"
+    }
 
     connection {
         type = "ssh"
