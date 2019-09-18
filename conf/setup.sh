@@ -12,6 +12,12 @@ sudo yum install -y jenkins
 
 sudo service jenkins start
 
+sudo mkdir /var/lib/jenkins/init.groovy.d
+sudo cp /tmp/basic-security.groovy /var/lib/jenkins/init.groovy.d/
+systemctl restart jenkins
+cd /var/lib/jenkins/
+rm -rf init.groovy.d 
+
 sudo chkconfig --add jenkins
 
 echo "Install Ansible"
