@@ -23,12 +23,6 @@ resource "aws_route_table_association" "dev-crta-public-subnet-1"{
     route_table_id = "${aws_route_table.dev-public-crt.id}"
 }
 
-resource "aws_route_table_association" "dev-subnet-private-1"{
-    subnet_id = "${aws_subnet.dev-subnet-private-1.id}"
-    route_table_id = "${aws_route_table.dev-public-crt.id}"
-}
-
-
 resource "aws_security_group" "ssh-allowed" {
     vpc_id = "${aws_vpc.dev-vpc.id}"
     
